@@ -16,3 +16,8 @@ ggplot(data=diamonds) + geom_bar (mapping=aes(x=cut, fill = cut))
 
 #separando por preenchimento do grafico em barra, mostra a diferença de corte e volume
 ggplot(data=diamonds) + geom_bar (mapping=aes(x=cut, fill = clarity))
+
+#criando face para cada tipo de corte
+ggplot(data=diamonds) + geom_bar (mapping=aes(x=color, fill = cut)) + 
+  facet_wrap(~cut)
+  
